@@ -11,6 +11,16 @@ $white: #fff;
 $lightpurple: #eac5e2;
 $darkblue: #222;
 
+body {
+  background-image: url('https://i.imgur.com/K1cs2lI.jpg');
+  height: 100%;
+  margin: 0;
+}
+
+// background-position: center;
+// background-repeat: no-repeat;
+// background-size: cover;
+
 input {
   border: 2px solid $red;
   border-radius: 4px;
