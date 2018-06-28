@@ -1,2 +1,33 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$black: #000;
+$blue: #80b3ff;
+$purple: #ffb3ff;
+$red: #f00;
+$green: #4caf50;
+$white: #fff;
+$lightpurple: #eac5e2;
+$darkblue: #222;
+
+input {
+  border: 2px solid $red;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  padding: 12px 20px;
+  width: 50%;
+}
+
+button {
+  background-color: $green;
+  border: border-box;
+  border-radius: 4px;
+  color: $white;
+  display: inline-block;
+  font-size: 12px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}

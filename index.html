@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>NURSING HOME RESIDENTS CARE PLAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="main-content">
+      <h1>NURSING HOME Registration page</h1>
+      <h3>New User Registration </h3>
+      <div id="formSignUp">
+
+        <form id="signUpForm">
+          <input name="credentials[email]" type="text" value=" email "><br>
+          <input name="credentials[password]" type="password" value=""><br>
+          <input name="credentials[password_confirmation]" type="password" value=""><br>
+          <button type="submit"> Sign Up</button>
+        </form>
+
+
+        <h3>Please sign In </h3>
+
+        <form id="signInForm">
+          <input name="credentials[email]" type="text" value="email "><br>
+          <input name="credentials[password]" type="password" value=""><br>
+          <button type="submit"> Sign In</button>
+        </form>
+      </div>
+
+      <h3> Password change </h3>
+      <form id="password_change">
+        <input type="text" name="passwords[old]" placeholder="Old Password"><br>
+        <input type="text" name="passwords[new]" placeholder="New Password"><br>
+        <button type="submit"> Submit</button>
+      </form>
+      <button id="sign-out" type="submit"> Sign Out</button>
+
+    </div>
+
+
+
+    </div>
+</body>
+
 </html>
