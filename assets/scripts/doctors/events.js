@@ -1,7 +1,7 @@
 'use strict'
 const getFormFields = require('../../../lib/get-form-fields')
 const docApi = require('./api.js')
-// const DocUi = require('./ui.js')
+const DocUi = require('./ui.js')
 
 const onCreateDoctor = function (event) {
   event.preventDefault()
@@ -18,6 +18,18 @@ const onCreateDoctor = function (event) {
     .catch(function (signUpError) {
       console.log('sign up error is ', signUpError)
     })
+}
+
+const onGetAllDoctors = function (event) {
+  event.preventDefault()
+  console.log('show doctor was logged here')
+
+  docApi.docShowAll()
+
+  // console.log('all doctors are ')
+
+    .then(DocUi.getAllDoctorsSuccess)
+    .catch(DocUi.getAllDoctorsError)
 }
 
 // const onSignIn = function (event) {
@@ -50,5 +62,6 @@ const onCreateDoctor = function (event) {
 // }
 //
 module.exports = {
-  onCreateDoctor: onCreateDoctor
+  onCreateDoctor: onCreateDoctor,
+  onGetAllDoctors: onGetAllDoctors
 }

@@ -2,11 +2,11 @@
 
 const store = require('../store')
 
-const signUpSuccess = function (signUpResponse) {
-  console.log('signUpResponse is ', signUpResponse)
+const getAllDoctorsSuccess = function (getAllDoctorsResponse) {
+  console.log('getAllDoctorsResponse is ', getAllDoctorsResponse)
 }
 
-const signUpError = function (error) {
+const getAllDoctorsError = function (error) {
   console.log('Error in sign up is ', error)
 }
 
@@ -21,8 +21,8 @@ const signInError = function (error) {
 }
 
 module.exports = {
-  signUpSuccess: signUpSuccess,
-  signUpError: signUpError,
+  getAllDoctorsSuccess: getAllDoctorsSuccess,
+  getAllDoctorsError: getAllDoctorsError,
   signInSuccess: signInSuccess,
   signInError: signInError
 }

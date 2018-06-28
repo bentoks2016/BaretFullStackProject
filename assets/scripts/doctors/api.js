@@ -6,7 +6,17 @@ const docCreate = function (data) {
     method: 'POST',
     url: config.apiUrl + '/doctors',
     data: data
-})}
+  }
+  )
+}
+
+const docShowAll = function () {
+  console.log('data is what it is')
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/doctors'
+  })
+}
 // '{
 // "doctor": {
 //  "first_name": "'"${FIRSTNAME}"'",
@@ -49,5 +59,6 @@ const docCreate = function (data) {
 // }
 
 module.exports = {
-  docCreate: docCreate
+  docCreate: docCreate,
+  docShowAll: docShowAll
 }

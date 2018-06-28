@@ -15,4 +15,5 @@ $(() => {
   $('#password_change').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#doctor_create').on('submit', docEvents.onCreateDoctor)
+  $('#doc_show').on('click', docEvents.onGetAllDoctors)
 })
