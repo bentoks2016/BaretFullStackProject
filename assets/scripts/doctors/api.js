@@ -5,6 +5,9 @@ const docCreate = function (data) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/doctors',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data: data
   }
   )
@@ -14,7 +17,10 @@ const docShowAll = function () {
   console.log('data is what it is')
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/doctors'
+    url: config.apiUrl + '/doctors',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -23,7 +29,10 @@ const docDelete = function (id) {
   console.log('id is ', id)
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + `/doctors/${id}`
+    url: config.apiUrl + `/doctors/${id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -32,6 +41,9 @@ const docUpdate = function (data) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/doctors/${data.doctor.id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data: data
   })
 }
