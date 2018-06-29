@@ -1,10 +1,20 @@
 'strict'
 
 const store = require('../store')
+// const tableCreate = require('../tableCreate')
 
 const getAllDoctorsSuccess = function (getAllDoctorsResponse) {
   console.log('getAllDoctorsResponse is ', getAllDoctorsResponse)
+  store.list = getAllDoctorsResponse
+  // $('#doctors-table-body').html(tableCreate(getAllDoctorsResponse))
+  $('show_doctor_modal').modal('toggle')
 }
+// SHOW ALL success
+// const showAllSuccess = function (showAllResponse) {
+//   store.list = showAllResponse.games
+//   $('#game-table-body').html(createTable(showAllResponse.games))
+//   $('#modalGameList').modal('toggle')
+// }
 
 const getAllDoctorsError = function (error) {
   console.log('Error in sign up is ', error)

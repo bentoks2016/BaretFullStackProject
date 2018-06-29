@@ -59,10 +59,38 @@
         <button id="doc_create" type="submit"> Register </button>
 
       </form>
-      <button id="doc_show" type="submit"> See all Doctors</button>
+      <button id="doc_show" class="btn btn-primary" data-toggle="modal" data-target="#show_doctor_modal "type="submit"> See all Doctors</button>
+</div>
+<div id="show_doctor_modal" class="modal">
+  <div id="doctor-list" class="modal-body">
+                <table class="table table-striped" >
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Doctor ID</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Specialization</th>
+                    </tr>
+                  </thead>
+                  <tbody id='doctors-table-body' >
+                  </tbody>
+                </table>
+              </div>
 </div>
 <div>
-  <h2> Update Doctor`s details </h2>
+  <h2> Delete a Doctor</h2>
+  <form id="doctor_delete">
+    <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
+    <button id="doc_delete" type="submit"> Delete</button>
+  </form>
+
+  <h2> Show a doctor </h2>
+  <form id="doctor_view">
+    <input type="number" placeholder="Enter the Doctor ID"><br>
+    <button id="doc_view" type="submit"> See a Doctor</button>
+  </form>
+
 </div>
     </div>
 

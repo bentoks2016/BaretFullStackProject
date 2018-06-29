@@ -16,4 +16,5 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#doctor_create').on('submit', docEvents.onCreateDoctor)
   $('#doc_show').on('click', docEvents.onGetAllDoctors)
+  $('#doctor_delete').on('submit', docEvents.onDeleteDoctor)
 })

@@ -17,6 +17,15 @@ const docShowAll = function () {
     url: config.apiUrl + '/doctors'
   })
 }
+
+const docDelete = function (id) {
+  console.log('this is api delete')
+  console.log('id is ', id)
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + `/doctors/${id}`
+  })
+}
 // '{
 // "doctor": {
 //  "first_name": "'"${FIRSTNAME}"'",
@@ -60,5 +69,6 @@ const docShowAll = function () {
 
 module.exports = {
   docCreate: docCreate,
-  docShowAll: docShowAll
+  docShowAll: docShowAll,
+  docDelete: docDelete
 }

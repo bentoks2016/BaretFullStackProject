@@ -1,0 +1,27 @@
+'strict'
+// CREATE html table from JSON
+const createTable = function (json) {
+  // establish which keys to take data from
+  let bodyRows = ''
+
+  // loop through array to create rows
+  for (let i = 0; i < json.length; i++) {
+    bodyRows += '<tr>'
+    bodyRows += '<td><button type="button" class="btn-line clickable">View</button></td>'
+    bodyRows += '<td class="game-list-id" >' + json[i].id + '</td>'
+    bodyRows += '<td>' + json[i].first_name + '</td>'
+    bodyRows += '<td>' + json[i].last_name + '</td>'
+    bodyRows += '<td>' + json[i].specialization + '</td>'
+    if (json[i].player_o === null) {
+      bodyRows += '<td>' + json[i].player_o + '</td>'
+    } else {
+      bodyRows += '<td>' + json[i].player_o.email + '</td>'
+    }
+    bodyRows += '</tr>'
+  }
+  return bodyRows
+}
+
+module.exports = {
+  createTable: createTable
+}

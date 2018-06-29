@@ -26,10 +26,16 @@ const onGetAllDoctors = function (event) {
 
   docApi.docShowAll()
 
-  // console.log('all doctors are ')
-
     .then(DocUi.getAllDoctorsSuccess)
     .catch(DocUi.getAllDoctorsError)
+}
+
+const onDeleteDoctor = function (event) {
+  event.preventDefault()
+  console.log('this is event delete doctor')
+  const data = getFormFields(event.target)
+  console.log(data.doctor.id)
+  docApi.docDelete(data.doctor.id)
 }
 
 // const onSignIn = function (event) {
@@ -63,5 +69,6 @@ const onGetAllDoctors = function (event) {
 //
 module.exports = {
   onCreateDoctor: onCreateDoctor,
-  onGetAllDoctors: onGetAllDoctors
+  onGetAllDoctors: onGetAllDoctors,
+  onDeleteDoctor: onDeleteDoctor
 }

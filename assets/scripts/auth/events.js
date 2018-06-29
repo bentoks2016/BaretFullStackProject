@@ -12,10 +12,12 @@ const onSignUp = function (event) {
 
   authApi.signUp(data)
     .then(function (signUpResponse) {
+      alert('Sign up was successful!')
       console.log('the sign of response is', signUpResponse)
     })
 
     .catch(function (signUpError) {
+      alert('Sign up was not successful!')
       console.log('sign up error is ', signUpError)
     })
 }
