@@ -1,12 +1,14 @@
 'strict'
 
 const store = require('../store')
-// const tableCreate = require('../tableCreate')
+const tableCreate = require('./tableCreate')
 
 const getAllDoctorsSuccess = function (getAllDoctorsResponse) {
   console.log('getAllDoctorsResponse is ', getAllDoctorsResponse)
-  store.list = getAllDoctorsResponse
-  // $('#doctors-table-body').html(tableCreate(getAllDoctorsResponse))
+  console.log('this is for response ', getAllDoctorsResponse.doctors)
+  store.list = getAllDoctorsResponse.doctors
+  $('#doctors-table-body').html(tableCreate.tableCreate(getAllDoctorsResponse.doctors))
+  // console.log('this is for table ', tableCreate.tableCreate)
   $('show_doctor_modal').modal('toggle')
 }
 // SHOW ALL success
