@@ -38,6 +38,13 @@ const onDeleteDoctor = function (event) {
   docApi.docDelete(data.doctor.id)
 }
 
+const onUpdateDoctor = function (event) {
+  event.preventDefault()
+  console.log('doctor update starts here')
+  const data = getFormFields(event.target)
+  docApi.docUpdate(data)
+}
+
 // const onSignIn = function (event) {
 //   event.preventDefault()
 //   console.log('this is the sign in part')
@@ -70,5 +77,6 @@ const onDeleteDoctor = function (event) {
 module.exports = {
   onCreateDoctor: onCreateDoctor,
   onGetAllDoctors: onGetAllDoctors,
-  onDeleteDoctor: onDeleteDoctor
+  onDeleteDoctor: onDeleteDoctor,
+  onUpdateDoctor: onUpdateDoctor
 }

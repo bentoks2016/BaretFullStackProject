@@ -26,6 +26,15 @@ const docDelete = function (id) {
     url: config.apiUrl + `/doctors/${id}`
   })
 }
+
+const docUpdate = function (data) {
+  console.log('data for update is ', data)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/doctors/${data.doctor.id}`,
+    data: data
+  })
+}
 // '{
 // "doctor": {
 //  "first_name": "'"${FIRSTNAME}"'",
@@ -70,5 +79,6 @@ const docDelete = function (id) {
 module.exports = {
   docCreate: docCreate,
   docShowAll: docShowAll,
-  docDelete: docDelete
+  docDelete: docDelete,
+  docUpdate: docUpdate
 }
