@@ -18,4 +18,5 @@ $(() => {
   $('#doc_show').on('click', docEvents.onGetAllDoctors)
   $('#doctor_delete').on('submit', docEvents.onDeleteDoctor)
   $('#doctor_update').on('submit', docEvents.onUpdateDoctor)
+  $('#doctor_view').on('submit', docEvents.onViewDoctor)
 })

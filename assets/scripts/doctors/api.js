@@ -36,6 +36,18 @@ const docDelete = function (id) {
   })
 }
 
+const docView = function (id) {
+  console.log('this is api View')
+  console.log('id is ', id)
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + `/doctors/${id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const docUpdate = function (data) {
   console.log('data for update is ', data)
   return $.ajax({
@@ -92,5 +104,6 @@ module.exports = {
   docCreate: docCreate,
   docShowAll: docShowAll,
   docDelete: docDelete,
-  docUpdate: docUpdate
+  docUpdate: docUpdate,
+  docView: docView
 }

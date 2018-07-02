@@ -45,6 +45,15 @@ const onUpdateDoctor = function (event) {
   docApi.docUpdate(data)
 }
 
+const onViewDoctor = function (event) {
+  event.preventDefault()
+  console.log('view a doctor here')
+  const data = getFormFields(event.target)
+  docApi.docView(data.doctor.id)
+    .then(DocUi.viewDoctorSuccess)
+    .catch(DocUi.viewDoctorError)
+}
+
 // const onSignIn = function (event) {
 //   event.preventDefault()
 //   console.log('this is the sign in part')
@@ -78,5 +87,6 @@ module.exports = {
   onCreateDoctor: onCreateDoctor,
   onGetAllDoctors: onGetAllDoctors,
   onDeleteDoctor: onDeleteDoctor,
-  onUpdateDoctor: onUpdateDoctor
+  onUpdateDoctor: onUpdateDoctor,
+  onViewDoctor: onViewDoctor
 }

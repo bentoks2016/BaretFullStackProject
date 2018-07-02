@@ -30,6 +30,7 @@ const onSignIn = function (event) {
   console.log('data is ', data)
 
   authApi.signIn(data)
+
     .then(ui.signInSuccess)
     .catch(ui.signInError)
 }

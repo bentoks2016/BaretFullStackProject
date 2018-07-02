@@ -32,9 +32,15 @@ const signInError = function (error) {
   console.log('error signing in', error)
 }
 
+const viewDoctorSuccess = function (viewDoctorReponse) {
+  console.log('View single doc is', viewDoctorReponse)
+  $('.viewDoc').text(viewDoctorReponse)
+}
+
 module.exports = {
   getAllDoctorsSuccess: getAllDoctorsSuccess,
   getAllDoctorsError: getAllDoctorsError,
+  viewDoctorSuccess: viewDoctorSuccess,
   signInSuccess: signInSuccess,
   signInError: signInError
 }
