@@ -12,15 +12,17 @@ $lightpurple: #eac5e2;
 $darkblue: #222;
 
 body {
-  // background-image: url('https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&h=350');
+  background-image: url('https://images.pexels.com/photos/48603/pexels-photo-48603.jpeg?auto=compress&cs=tinysrgb&h=350');
   // background-position: center;
   height: 100%;
   margin: 0;
 }
 
-.modal-header, h4, .close {
+.modal-header,
+h4,
+.close {
   background-color: #5cb85c;
-  color:white !important;
+  color: $white;
   font-size: 30px;
   text-align: center;
 }
@@ -35,7 +37,7 @@ body {
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
+// Style the links inside the navigation bar */
 .topnav a {
   color: #f2f2f2;
   float: left;
@@ -45,16 +47,16 @@ body {
   text-decoration: none;
 }
 
-/* Change the color of links on hover */
+// Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: $black;
 }
 
-/* Add a color to the active/current link */
+// Add a color to the active/current link */
 .topnav a.active {
   background-color: #4caf50;
-  color: white;
+  color: $white;
 }
 
 // background-position: center;
@@ -80,4 +82,14 @@ button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+}
+
+.footer {
+  background-color: $red;
+  bottom: 0;
+  color: $white;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
