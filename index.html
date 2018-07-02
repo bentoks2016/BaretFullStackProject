@@ -21,12 +21,92 @@
 
 <ul class="nav nav-tabs nav-justified">
   <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
-  <li><a data-toggle="pill" href="#menu1">Sign In</a></li>
-  <li><a data-toggle="pill" href="#menu2">Sign Up</a></li>
+  <li><a class="btn btn-default btn-lg" id="myBtn" data-toggle="pill" href="#menu1">Sign In</a></li>
+  <li><a class="btn btn-default btn-lg" id="myBtn2" data-toggle="pill" href="#menu2">Sign Up</a></li>
 </ul>
 
 
   <!-- This ends the signup / signin tab section.  -->
+
+  <!-- Modal Sign in starts -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" id="signInForm">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" name="credentials[email]" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" name="credentials[password]" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#menu2">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-- Modal sign in ends -->
+
+<!--Modal sign up starts  -->
+<!-- Modal -->
+<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="signUpForm">
+      <div class="modal-header" style="padding:35px 50px;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+      </div>
+      <div class="modal-body" style="padding:40px 50px;">
+        <form role="form">
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+            <input type="text" name="credentials[email]" class="form-control" id="usrname2" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+            <input type="text" name="credentials[password]" class="form-control" id="psw2" placeholder="Enter password">
+          </div>
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+            <input type="text" name="credentials[password_confirmation]" class="form-control" id="psw3" placeholder="Enter password">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="" checked>Remember me</label>
+          </div>
+            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Sign up</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        <p>Already a member? <a href="#">Sign In</a></p>
+        <p>Forgot <a href="#signUpForm">Password?</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--Modal sign up ends  -->
 
 
   <!--This section creates notification alerts  -->
@@ -96,15 +176,16 @@ You have successfully changed password.
         <p>Some content.</p>
       </div>
       <div id="menu1" class="tab-pane fade">
-        <h3>Sign In</h3>
-        <!-- <p>Some content in Sign in</p> -->
-        <h3>Please sign In </h3>
+        <!-- <h3>Sign In</h3>
+        <! <p>Some content in Sign in</p> -->
+        <!-- <h3>Please sign In </h3> -->
 
-        <form id="signInForm">
+        <!-- <form id="signInForm">
           <input name="credentials[email]" type="text" value="email "><br>
           <input name="credentials[password]" type="password" value=""><br>
           <button type="submit"> Sign In</button>
-        </form>
+        </form>  -->
+        <div class="showDocPage hide">
         <h3> Password change </h3>
         <form id="password_change">
           <input type="text" name="passwords[old]" placeholder="Old Password"><br>
@@ -113,14 +194,14 @@ You have successfully changed password.
         </form>
 
         <button id="sign-out" type="submit"> Sign Out</button>
-
+</div>
       </div>
 
 
       <div id="menu2" class="tab-pane fade">
-        <h3>Sign Up</h3>
-        <!-- <p>Some content in sign up.</p> -->
-        <h3>New User Registration </h3>
+        <!-- <h3>Sign Up</h3>
+        <!- <p>Some content in sign up.</p> -->
+        <!-- <h3>New User Registration </h3>
         <div id="formSignUp">
 
           <form id="signUpForm">
@@ -128,9 +209,9 @@ You have successfully changed password.
             <input name="credentials[password]" type="password" value=""><br>
             <input name="credentials[password_confirmation]" type="password" value=""><br>
             <button type="submit"> Sign Up</button>
-          </form>
+          </form>  -->
 
-            <button id="sign-out" type="submit"> Sign Out</button>
+
       </div>
     </div>
   </div>

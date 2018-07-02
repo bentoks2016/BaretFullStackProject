@@ -11,15 +11,9 @@ const onSignUp = function (event) {
   console.log('data is ', data)
 
   authApi.signUp(data)
-    .then(function (signUpResponse) {
-      $('#successful').toggleClass('hide')
-      console.log('the sign of response is', signUpResponse)
-    })
+    .then(ui.signUpSuccess)
 
-    .catch(function (signUpError) {
-      $('#failed').toggleClass('hide')
-      console.log('sign up error is ', signUpError)
-    })
+    .catch(ui.signUpError)
 }
 
 const onSignIn = function (event) {
@@ -55,6 +49,18 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFail)
 }
+
+$(document).ready(function () {
+  $('#myBtn').click(function () {
+    $('#myModal').modal()
+  })
+})
+
+$(document).ready(function () {
+  $('#myBtn2').click(function () {
+    $('#myModal2').modal()
+  })
+})
 
 module.exports = {
   onSignUp: onSignUp,
