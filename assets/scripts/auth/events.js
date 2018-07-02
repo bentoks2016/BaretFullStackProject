@@ -12,12 +12,12 @@ const onSignUp = function (event) {
 
   authApi.signUp(data)
     .then(function (signUpResponse) {
-      alert('Sign up was successful!')
+      $('#successful').toggleClass('hide')
       console.log('the sign of response is', signUpResponse)
     })
 
     .catch(function (signUpError) {
-      alert('Sign up was not successful!')
+      $('#failed').toggleClass('hide')
       console.log('sign up error is ', signUpError)
     })
 }
@@ -27,18 +27,24 @@ const onSignIn = function (event) {
   console.log('this is the sign in part')
 
   const data = getFormFields(event.target)
-  console.log('data is ', data)
 
   authApi.signIn(data)
 
-    .then(ui.signInSuccess)
-    .catch(ui.signInError)
+    .then(function (signInSuccess) {
+      console.log('data is ', data)
+      $('#successfulSignIn').toggleClass('hide')
+    })
+    .catch(function (signInError) {
+      $('#failedSignIn').toggleClass('hide')
+      console.log('sign up error is ', signInError)
+    })
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
-
+  $('#successfulSignOut').toggleClass('hide')
   authApi.signOut(event)
+
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
