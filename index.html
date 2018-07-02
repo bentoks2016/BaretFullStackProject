@@ -15,20 +15,25 @@
 
 
 </head>
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
-
 <body>
+
+<!-- This Section is for the signup / signin tab. -->
+
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+  <li><a data-toggle="pill" href="#menu1">Sign In</a></li>
+  <li><a data-toggle="pill" href="#menu2">Sign Up</a></li>
+</ul>
+
+
+  <!-- This ends the signup / signin tab section.  -->
+
 
   <!--This section creates notification alerts  -->
 
   <div id="successful" class="alert alert-success alert-dismissible hide" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  You have signed up successfully.
+  You have signed up successfully. Please sign in to access.
 </div>
 
 <div id="failed" class="alert alert-danger alert-dismissible hide" role="alert">
@@ -51,6 +56,30 @@ You have signed in successfully.
 You have successfully signed out.
 </div>
 
+<div id="failedSignOut" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Sign Out Failed!</strong>
+</div>
+
+<div id="successfulDocCreate" class="alert alert-success alert-dismissible hide" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+New Doctor Successfully Registered.
+</div>
+
+<div id="failedDocCreate" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  New Doctor Registration, Not Successful.
+</div>
+
+<div id="successfulPassword" class="alert alert-success alert-dismissible hide" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+You have successfully changed password.
+</div>
+
+<div id="failedPassword" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Password Change, Not Successful.
+</div>
 
 <!--This ends the alerts section  -->
 
@@ -58,18 +87,17 @@ You have successfully signed out.
 
   <div class="wrapper">
     <div class="main-content">
-      <h1>NURSING HOME Registration page</h1>
-      <h3>New User Registration </h3>
-      <div id="formSignUp">
 
-        <form id="signUpForm">
-          <input name="credentials[email]" type="text" value=" email "><br>
-          <input name="credentials[password]" type="password" value=""><br>
-          <input name="credentials[password_confirmation]" type="password" value=""><br>
-          <button type="submit"> Sign Up</button>
-        </form>
+      <!-- This Section is for signup / signin body -->
 
-
+      <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>HOME</h3>
+        <p>Some content.</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Sign In</h3>
+        <!-- <p>Some content in Sign in</p> -->
         <h3>Please sign In </h3>
 
         <form id="signInForm">
@@ -77,18 +105,70 @@ You have successfully signed out.
           <input name="credentials[password]" type="password" value=""><br>
           <button type="submit"> Sign In</button>
         </form>
+        <h3> Password change </h3>
+        <form id="password_change">
+          <input type="text" name="passwords[old]" placeholder="Old Password"><br>
+          <input type="text" name="passwords[new]" placeholder="New Password"><br>
+          <button type="submit"> Submit</button>
+        </form>
+
+        <button id="sign-out" type="submit"> Sign Out</button>
+
       </div>
 
-      <h3> Password change </h3>
+
+      <div id="menu2" class="tab-pane fade">
+        <h3>Sign Up</h3>
+        <!-- <p>Some content in sign up.</p> -->
+        <h3>New User Registration </h3>
+        <div id="formSignUp">
+
+          <form id="signUpForm">
+            <input name="credentials[email]" type="text" value=" email "><br>
+            <input name="credentials[password]" type="password" value=""><br>
+            <input name="credentials[password_confirmation]" type="password" value=""><br>
+            <button type="submit"> Sign Up</button>
+          </form>
+
+            <button id="sign-out" type="submit"> Sign Out</button>
+      </div>
+    </div>
+  </div>
+
+      <!-- This ends the signup / signin body section -->
+
+
+      <!-- <h1>NURSING HOME Registration page</h1> -->
+      <!-- <h3>New User Registration </h3>
+      <div id="formSignUp">
+
+        <form id="signUpForm">
+          <input name="credentials[email]" type="text" value=" email "><br>
+          <input name="credentials[password]" type="password" value=""><br>
+          <input name="credentials[password_confirmation]" type="password" value=""><br>
+          <button type="submit"> Sign Up</button>
+        </form> -->
+
+
+        <!-- <h3>Please sign In </h3>
+
+        <form id="signInForm">
+          <input name="credentials[email]" type="text" value="email "><br>
+          <input name="credentials[password]" type="password" value=""><br>
+          <button type="submit"> Sign In</button>
+        </form>
+      </div> -->
+
+      <!-- <h3> Password change </h3>
       <form id="password_change">
         <input type="text" name="passwords[old]" placeholder="Old Password"><br>
         <input type="text" name="passwords[new]" placeholder="New Password"><br>
         <button type="submit"> Submit</button>
-      </form>
-      <button id="sign-out" type="submit"> Sign Out</button>
+      </form> -->
+      <!-- <button id="sign-out" type="submit"> Sign Out</button> -->
 
     </div>
-    <div id="doctorsPage">
+    <div id="doctorsPage" class="showDocPage hide">
       <div>
       <h2> Doctor`s Registration Form </h2>
       <form id="doctor_create">
@@ -190,7 +270,7 @@ You have successfully signed out.
 </div>
     </div>
 
-    <div>
+    <!-- <div>
       <h2> Resident`s Registration Form </h2>
       <form id="resident_create">
         <input type="text" name="firstname" placeholder="FIRST NAME"><br>
@@ -200,7 +280,7 @@ You have successfully signed out.
 
       </form>
 
-    </div>
+    </div> -->
 
 
 

@@ -30,23 +30,20 @@ const onSignIn = function (event) {
 
   authApi.signIn(data)
 
-    .then(function (signInSuccess) {
-      console.log('data is ', data)
-      $('#successfulSignIn').toggleClass('hide')
-    })
-    .catch(function (signInError) {
-      $('#failedSignIn').toggleClass('hide')
-      console.log('sign up error is ', signInError)
-    })
+    .then(ui.signInSuccess)
+
+    .catch(ui.signInError)
 }
 
+// For Signing Out
 const onSignOut = function (event) {
   event.preventDefault()
-  $('#successfulSignOut').toggleClass('hide')
+
   authApi.signOut(event)
 
     .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+
+    .catch(ui.signOutError)
 }
 
 const onChangePassword = function (event) {
@@ -54,6 +51,7 @@ const onChangePassword = function (event) {
   const data = getFormFields(event.target)
   console.log('Please accept new passowrd')
   authApi.passwordChange(data)
+
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFail)
 }

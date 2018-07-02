@@ -13,10 +13,12 @@ const onCreateDoctor = function (event) {
   docApi.docCreate(data)
     .then(function (signUpResponse) {
       console.log('the sign of response is', signUpResponse)
+      $('#successfulDocCreate').toggleClass('hide')
     })
 
     .catch(function (signUpError) {
       console.log('sign up error is ', signUpError)
+      $('#failedDocCreate').toggleClass('hide')
     })
 }
 
