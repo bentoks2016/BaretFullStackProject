@@ -8,8 +8,9 @@ const clearForm = function () {
 }
 
 const signUpSuccess = function (signUpResponse) {
-  $('#successful').toggleClass('hide').fadeOut(3000)
+  $('#successful').toggleClass('hide').fadeOut(7000)
   clearForm()
+  $('#myModal2').modal('toggle')
   console.log('the sign of response is', signUpResponse)
 }
 
