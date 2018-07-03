@@ -149,6 +149,16 @@ New Doctor Successfully Registered.
   New Doctor Registration, Not Successful.
 </div>
 
+<div id="successfulDocDelete" class="alert alert-success alert-dismissible hide" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+Doctor Successfully Deleted.
+</div>
+
+<div id="failedDocDelete" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Doctor Delete, Not Successful.
+</div>
+
 <div id="successfulPassword" class="alert alert-success alert-dismissible hide" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 You have successfully changed password.
@@ -261,7 +271,7 @@ You have successfully changed password.
   </div>
 </div>
 
-
+<div>
   <h2> Delete a Doctor</h2>
   <form id="doctor_delete">
     <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
@@ -270,29 +280,35 @@ You have successfully changed password.
 
   <h2> Show a doctor </h2>
   <form id="doctor_view">
+    <div class="form-group">
     <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
+  </div>
     <button id="doc_view" type="submit" class="btn btn-success">See a Doctor</button>
   </form>
   <div class="viewDoc"></div>
 
   <h2>Update a doctor`s details</h2>
   <form id="doctor_update">
+    <div class="form-group">
     <input type="number" name="doctor[id]" placeholder="Doctor ID"><br>
     <input type="text" name="doctor[first_name]" placeholder="Doctor`s First Name"><br>
     <input type="text" name="doctor[last_name]" placeholder="Dcotor`s Last Name"><br>
     <input type="text" name="doctor[specialization]" placeholder="specialization"><br>
+  </div>
     <button id="doc_update" type="submit" class="btn btn-success">Update Doctor Info</button>
 
   </form>
-
+</div>
 </div>
     </div>
 
             <div class="showDocPage hide">
             <h3> Password change </h3>
             <form id="password_change">
+              <div class="form-group">
               <input type="text" name="passwords[old]" placeholder="Old Password"><br>
               <input type="text" name="passwords[new]" placeholder="New Password"><br>
+            </div>
               <button type="submit" class="btn btn-success">Change Password</button>
             </form>
               <button id="sign-out" type="submit" class="btn btn-success">Sign Out</button>

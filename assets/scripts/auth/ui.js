@@ -3,7 +3,7 @@
 const store = require('../store')
 
 const clearForm = function () {
-  $('.form-group input[type=text]').val('')
+  $('.form-group input[type=text] input[type=number]').val('')
   console.log('clear has to run')
 }
 
@@ -67,5 +67,6 @@ module.exports = {
   signOutSuccess: signOutSuccess,
   signOutError: signOutError,
   changePasswordSuccess: changePasswordSuccess,
-  changePasswordFail: changePasswordFail
+  changePasswordFail: changePasswordFail,
+  clearForm
 }

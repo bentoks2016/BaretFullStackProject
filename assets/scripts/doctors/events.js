@@ -11,15 +11,8 @@ const onCreateDoctor = function (event) {
   console.log('data is ', data)
 
   docApi.docCreate(data)
-    .then(function (signUpResponse) {
-      console.log('the sign of response is', signUpResponse)
-      $('#successfulDocCreate').toggleClass('hide')
-    })
-
-    .catch(function (signUpError) {
-      console.log('sign up error is ', signUpError)
-      $('#failedDocCreate').toggleClass('hide')
-    })
+    .then(DocUi.createDoctorSuccess)
+    .catch(DocUi.createDoctorFail)
 }
 
 const onGetAllDoctors = function (event) {
@@ -38,6 +31,9 @@ const onDeleteDoctor = function (event) {
   const data = getFormFields(event.target)
   console.log(data.doctor.id)
   docApi.docDelete(data.doctor.id)
+
+    .then(DocUi.deleteDoctorSuccess)
+    .catch(DocUi.deleteDoctorFail)
 }
 
 const onUpdateDoctor = function (event) {
@@ -56,35 +52,6 @@ const onViewDoctor = function (event) {
     .catch(DocUi.viewDoctorError)
 }
 
-// const onSignIn = function (event) {
-//   event.preventDefault()
-//   console.log('this is the sign in part')
-//
-//   const data = getFormFields(event.target)
-//   console.log('data is ', data)
-//
-//   authApi.signIn(data)
-//     .then(ui.signInSuccess)
-//     .catch(ui.signInError)
-// }
-//
-// const onSignOut = function (event) {
-//   event.preventDefault()
-//
-//   authApi.signOut(event)
-//     .then(ui.signOutSuccess)
-//     .catch(ui.signOutFailure)
-// }
-//
-// const onChangePassword = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   console.log('Please accept new passowrd')
-//   authApi.passwordChange(data)
-//     .then(ui.changePasswordSuccess)
-//     .catch(ui.changePasswordFail)
-// }
-//
 module.exports = {
   onCreateDoctor: onCreateDoctor,
   onGetAllDoctors: onGetAllDoctors,

@@ -3,6 +3,8 @@
 const store = require('../store')
 const tableCreate = require('./tableCreate')
 
+const ui = require('../auth/ui.js')
+
 const getAllDoctorsSuccess = function (getAllDoctorsResponse) {
   console.log('getAllDoctorsResponse is ', getAllDoctorsResponse)
   console.log('this is for response ', getAllDoctorsResponse.doctors)
@@ -11,25 +13,22 @@ const getAllDoctorsSuccess = function (getAllDoctorsResponse) {
   // console.log('this is for table ', tableCreate.tableCreate)
   $('show_doctor_modal').modal('toggle')
 }
-// SHOW ALL success
-// const showAllSuccess = function (showAllResponse) {
-//   store.list = showAllResponse.games
-//   $('#game-table-body').html(createTable(showAllResponse.games))
-//   $('#modalGameList').modal('toggle')
-// }
 
 const getAllDoctorsError = function (error) {
   console.log('Error in sign up is ', error)
 }
 
-const signInSuccess = function (response) {
-  console.log('this is a sign in success', response.user)
-  store.user = response.user
-  console.log(store.user)
+const createDoctorSuccess = function (createDoctorResponse) {
+  console.log('Doctor was created here ', createDoctorResponse)
+  $('#successfulDocCreate').toggleClass('hide').fadeOut(7000)
+  console.log('clearform was here', ui.clearForm)
+  ui.clearForm()
 }
 
-const signInError = function (error) {
-  console.log('error signing in', error)
+const createDoctorFail = function (failCreateDoc) {
+  console.log('sign up error is ', failCreateDoc)
+  $('#failedDocCreate').toggleClass('hide').fade(7000)
+  ui.clearForm()
 }
 
 const viewDoctorSuccess = function (viewDoctorReponse) {
@@ -37,10 +36,25 @@ const viewDoctorSuccess = function (viewDoctorReponse) {
   $('.viewDoc').html({viewDoctorReponse})
 }
 
+const deleteDoctorSuccess = function (deleteDoctorResponse) {
+  $('#successfulDocDelete').toggleClass('hide').fadeOut(7000)
+  ui.clearForm()
+  console.log('delete doc was success ', deleteDoctorResponse)
+}
+
+const deleteDoctorFail = function (deleteDoctorFailResponse) {
+  $('#failedDocDelete').toggleClass('hide').fadeOut(7000)
+  ui.clearForm()
+  console.log('delete failed here ', deleteDoctorFailResponse)
+}
+
 module.exports = {
   getAllDoctorsSuccess: getAllDoctorsSuccess,
   getAllDoctorsError: getAllDoctorsError,
   viewDoctorSuccess: viewDoctorSuccess,
-  signInSuccess: signInSuccess,
-  signInError: signInError
+  deleteDoctorSuccess: deleteDoctorSuccess,
+  deleteDoctorFail: deleteDoctorFail,
+  createDoctorSuccess: createDoctorSuccess,
+  createDoctorFail: createDoctorFail
+
 }
