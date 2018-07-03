@@ -3,7 +3,7 @@
 const store = require('../store')
 
 const clearForm = function () {
-  $('.form-group input[type=text] input[type=number]').val('')
+  $('.form-group input').val('')
   console.log('clear has to run')
 }
 
@@ -26,6 +26,7 @@ const signInSuccess = function (response) {
   clearForm()
   $('#myModal').modal('toggle')
   $('.showDocPage').toggleClass('hide')
+  $('#navTop').toggleClass('hide')
   store.user = response.user
   console.log(store.user)
 }
@@ -41,6 +42,8 @@ const signInError = function (error) {
 const signOutSuccess = function (signOutResponse) {
   $('#successfulSignOut').toggleClass('hide')
     .fadeOut(3000)
+  $('#navTop').toggleClass('hide')
+  $('.showDocPage').toggleClass('hide')
   console.log('signOutResponse is ', signOutResponse)
 }
 
@@ -50,12 +53,14 @@ const signOutError = function (error) {
 }
 
 const changePasswordSuccess = function () {
-  $('#successfulPassword').toggleClass('hide').fadeOut(3000)
+  $('#failedPassword').addClass('hide')
+  $('#successfulPassword').removeClass('hide')
   console.log('password changed too')
 }
 
 const changePasswordFail = function () {
-  $('#failedPassword').toggleClass('hide').fadeOut(3000)
+  $('#successfulPassword').addClass('hide')
+  $('#failedPassword').removeClass('hide')
   console.log('change failed')
 }
 

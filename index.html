@@ -17,7 +17,7 @@
 </head>
 <body>
 <!-- This Section is for the signup / signin tab. -->
-<ul class="nav nav-tabs nav-justified">
+<ul class="nav nav-tabs nav-justified" id="navTop">
   <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
   <li><a class="btn btn-default btn-lg" id="myBtn" data-toggle="pill" href="#menu1">Sign In</a></li>
   <li><a class="btn btn-default btn-lg" id="myBtn2" data-toggle="pill" href="#menu2">Sign Up</a></li>
@@ -34,7 +34,7 @@
       <div class="modal-content" id="signInForm">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock">.</span> Login</h4>
+          <h4><span class="glyphicon glyphicon-lock">.</span> Sign In</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form">
@@ -54,8 +54,7 @@
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove">.</span> Cancel</button>
-          <p>Not a member? <a href="#menu2">Sign Up</a></p>
-          <p>Forgot <a href="#">Password?</a></p>
+          <p>Not a member? <a href="#signUpForm" id="signUpModal">Sign Up</a></p>
         </div>
       </div>
 
@@ -72,7 +71,7 @@
     <div class="modal-content" id="signUpForm">
       <div class="modal-header" style="padding:35px 50px;">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4><span class="glyphicon glyphicon-lock">.</span> Login</h4>
+        <h4><span class="glyphicon glyphicon-lock">.</span> Sign Up</h4>
       </div>
       <div class="modal-body" style="padding:40px 50px;">
         <form role="form">
@@ -96,8 +95,8 @@
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove">.</span> Cancel</button>
-        <p>Already a member? <a href="#">Sign In</a></p>
-        <p>Forgot <a href="#signUpForm">Password?</a></p>
+        <p>Already a member? <a href="#signInForm" id="signInModal">Sign In</a></p>
+
       </div>
     </div>
 
@@ -207,13 +206,16 @@ You have successfully changed password.
       <!-- This ends the signup / signin body section -->
 
     </div>
+    <div id="fullPage">
     <div id="doctorsPage" class="showDocPage hide">
       <div>
       <h2> Doctor`s Registration Form </h2>
       <form id="doctor_create">
+        <div class="form-group">
         <input type="text" name="doctor[first_name]" placeholder="FIRST NAME"><br>
         <input type="text" name="doctor[last_name]" placeholder="LAST NAME"><br>
         <input type="text" name="doctor[specialization]" placeholder="SPECIALIZATION"><br>
+      </div>
         <button id="doc_create" type="submit" class="btn btn-success">Register</button>
       </form>
       <button id="doc_show" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal "type="button"> See all Doctors</button>
@@ -284,7 +286,9 @@ You have successfully changed password.
 <div>
   <h2> Delete a Doctor</h2>
   <form id="doctor_delete">
+    <div class="form-group">
     <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
+  </div>
     <button id="doc_delete" type="submit" class="btn btn-success">Delete</button>
   </form>
 
@@ -323,6 +327,7 @@ You have successfully changed password.
             </form>
               <button id="sign-out" type="submit" class="btn btn-success">Sign Out</button>
     </div>
+  </div>
 
     <!-- <div>
       <h2> Resident`s Registration Form </h2>

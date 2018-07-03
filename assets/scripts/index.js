@@ -19,4 +19,6 @@ $(() => {
   $('#doctor_delete').on('submit', docEvents.onDeleteDoctor)
   $('#doctor_update').on('submit', docEvents.onUpdateDoctor)
   $('#doctor_view').on('submit', docEvents.onViewDoctor)
+  $('#signUpModal').on('click', authEvents.showSignUp)
+  $('#signInModal').on('click', authEvents.showSignIn)
 })

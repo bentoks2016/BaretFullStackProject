@@ -62,9 +62,23 @@ $(document).ready(function () {
   })
 })
 
+const showSignUp = function () {
+  console.log('hide/show modal')
+  $('#myModal').modal('hide')
+  console.log('hide/show modal  for real')
+  $('#myModal2').modal('show')
+}
+const showSignIn = function () {
+  console.log('hide/show modal')
+  $('#myModal2').modal('hide')
+  $('#myModal').modal('show')
+  console.log('modal show end here')
+}
 module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,
   onSignOut: onSignOut,
-  onChangePassword: onChangePassword
+  onChangePassword: onChangePassword,
+  showSignUp,
+  showSignIn
 }

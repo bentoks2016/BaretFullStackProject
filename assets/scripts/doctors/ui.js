@@ -33,7 +33,7 @@ const createDoctorFail = function (failCreateDoc) {
 
 const viewDoctorSuccess = function (viewDoctorReponse) {
   console.log('View single doc is', viewDoctorReponse)
-  $('.viewDoc').html({viewDoctorReponse})
+  $('.viewDoc').html(viewDoctorReponse.doctor)
 }
 
 const deleteDoctorSuccess = function (deleteDoctorResponse) {
