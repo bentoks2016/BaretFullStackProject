@@ -48,6 +48,18 @@ const deleteDoctorFail = function (deleteDoctorFailResponse) {
   console.log('delete failed here ', deleteDoctorFailResponse)
 }
 
+const updateDoctorSuccess = function (updateDoctorResponse) {
+  $('#successfulDocUpdate').toggleClass('hide').fadeOut(7000)
+  ui.clearForm()
+  console.log('delete doc was success ', updateDoctorResponse)
+}
+
+const updateDoctorFail = function (updateDoctorFailResponse) {
+  $('#failedDocupdate').toggleClass('hide').fadeOut(7000)
+  ui.clearForm()
+  console.log('delete failed here ', updateDoctorFailResponse)
+}
+
 module.exports = {
   getAllDoctorsSuccess: getAllDoctorsSuccess,
   getAllDoctorsError: getAllDoctorsError,
@@ -55,6 +67,8 @@ module.exports = {
   deleteDoctorSuccess: deleteDoctorSuccess,
   deleteDoctorFail: deleteDoctorFail,
   createDoctorSuccess: createDoctorSuccess,
-  createDoctorFail: createDoctorFail
+  createDoctorFail: createDoctorFail,
+  updateDoctorSuccess: updateDoctorSuccess,
+  updateDoctorFail: updateDoctorFail
 
 }

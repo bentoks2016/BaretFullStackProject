@@ -41,6 +41,9 @@ const onUpdateDoctor = function (event) {
   console.log('doctor update starts here')
   const data = getFormFields(event.target)
   docApi.docUpdate(data)
+
+    .then(DocUi.updateDoctorSuccess)
+    .catch(DocUi.updateDoctorFail)
 }
 
 const onViewDoctor = function (event) {
