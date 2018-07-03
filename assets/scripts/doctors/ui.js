@@ -34,7 +34,7 @@ const signInError = function (error) {
 
 const viewDoctorSuccess = function (viewDoctorReponse) {
   console.log('View single doc is', viewDoctorReponse)
-  $('.viewDoc').text(viewDoctorReponse)
+  $('.viewDoc').html({viewDoctorReponse})
 }
 
 module.exports = {

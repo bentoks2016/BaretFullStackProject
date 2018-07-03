@@ -34,26 +34,26 @@
       <div class="modal-content" id="signInForm">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+          <h4><span class="glyphicon glyphicon-lock">.</span> Login</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form">
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <label for="usrname"><span class="glyphicon glyphicon-user">.</span> Username</label>
               <input type="text" name="credentials[email]" class="form-control" id="usrname" placeholder="Enter email">
             </div>
             <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <label for="psw"><span class="glyphicon glyphicon-eye-open">.</span> Password</label>
               <input type="text" name="credentials[password]" class="form-control" id="psw" placeholder="Enter password">
             </div>
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
             </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off">.</span> Login</button>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove">.</span> Cancel</button>
           <p>Not a member? <a href="#menu2">Sign Up</a></p>
           <p>Forgot <a href="#">Password?</a></p>
         </div>
@@ -72,30 +72,30 @@
     <div class="modal-content" id="signUpForm">
       <div class="modal-header" style="padding:35px 50px;">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        <h4><span class="glyphicon glyphicon-lock">.</span> Login</h4>
       </div>
       <div class="modal-body" style="padding:40px 50px;">
         <form role="form">
           <div class="form-group">
-            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+            <label for="usrname"><span class="glyphicon glyphicon-user">.</span> Username</label>
             <input type="text" name="credentials[email]" class="form-control" id="usrname2" placeholder="Enter email">
           </div>
           <div class="form-group">
-            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+            <label for="psw"><span class="glyphicon glyphicon-eye-open">.</span> Password</label>
             <input type="text" name="credentials[password]" class="form-control" id="psw2" placeholder="Enter password">
           </div>
           <div class="form-group">
-            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+            <label for="psw"><span class="glyphicon glyphicon-eye-open">.</span> Password</label>
             <input type="text" name="credentials[password_confirmation]" class="form-control" id="psw3" placeholder="Enter password">
           </div>
           <div class="checkbox">
             <label><input type="checkbox" value="" checked>Remember me</label>
           </div>
-            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Sign up</button>
+            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off">.</span> Sign up</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove">.</span> Cancel</button>
         <p>Already a member? <a href="#">Sign In</a></p>
         <p>Forgot <a href="#signUpForm">Password?</a></p>
       </div>
@@ -175,16 +175,6 @@ You have successfully changed password.
       </div>
       <div id="menu1" class="tab-pane fade">
 
-        <div class="showDocPage hide">
-        <h3> Password change </h3>
-        <form id="password_change">
-          <input type="text" name="passwords[old]" placeholder="Old Password"><br>
-          <input type="text" name="passwords[new]" placeholder="New Password"><br>
-          <button type="submit"> Submit</button>
-        </form>
-
-        <button id="sign-out" type="submit"> Sign Out</button>
-</div>
       </div>
 
 
@@ -204,8 +194,7 @@ You have successfully changed password.
         <input type="text" name="doctor[first_name]" placeholder="FIRST NAME"><br>
         <input type="text" name="doctor[last_name]" placeholder="LAST NAME"><br>
         <input type="text" name="doctor[specialization]" placeholder="SPECIALIZATION"><br>
-        <button id="doc_create" type="submit"> Register </button>
-
+        <button id="doc_create" type="submit" class="btn btn-success">Register</button>
       </form>
       <button id="doc_show" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal "type="button"> See all Doctors</button>
 </div>
@@ -220,7 +209,7 @@ You have successfully changed password.
       </div>
        <!-- <div class="modal-body"> -->
 
-<div id="" class="modal">
+<div class="modal">
 
 </div>
  <!-- </div> -->
@@ -276,13 +265,13 @@ You have successfully changed password.
   <h2> Delete a Doctor</h2>
   <form id="doctor_delete">
     <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
-    <button id="doc_delete" type="submit"> Delete</button>
+    <button id="doc_delete" type="submit" class="btn btn-success">Delete</button>
   </form>
 
   <h2> Show a doctor </h2>
   <form id="doctor_view">
     <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
-    <button id="doc_view" type="submit"> See a Doctor</button>
+    <button id="doc_view" type="submit" class="btn btn-success">See a Doctor</button>
   </form>
   <div class="viewDoc"></div>
 
@@ -292,11 +281,21 @@ You have successfully changed password.
     <input type="text" name="doctor[first_name]" placeholder="Doctor`s First Name"><br>
     <input type="text" name="doctor[last_name]" placeholder="Dcotor`s Last Name"><br>
     <input type="text" name="doctor[specialization]" placeholder="specialization"><br>
-    <button id="doc_update" type="submit"> Update Doctor Details</button>
+    <button id="doc_update" type="submit" class="btn btn-success">Update Doctor Info</button>
 
   </form>
 
 </div>
+    </div>
+
+            <div class="showDocPage hide">
+            <h3> Password change </h3>
+            <form id="password_change">
+              <input type="text" name="passwords[old]" placeholder="Old Password"><br>
+              <input type="text" name="passwords[new]" placeholder="New Password"><br>
+              <button type="submit" class="btn btn-success">Change Password</button>
+            </form>
+              <button id="sign-out" type="submit" class="btn btn-success">Sign Out</button>
     </div>
 
     <!-- <div>
@@ -312,13 +311,6 @@ You have successfully changed password.
     </div> -->
 
 
-
-    <footer>
-      <div class="footer">
-        <p>Footer</p>
-      </div>
-
-    </footer>
 </body>
 
 </html>

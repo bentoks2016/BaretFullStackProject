@@ -10,53 +10,57 @@ $green: #4caf50;
 $white: #fff;
 $lightpurple: #eac5e2;
 $darkblue: #222;
+$grey: #ddd;
+$offwhite: #f2f2f2;
+$lightblack: #333;
+$offwhite2: #f9f9f9;
+$lightgreen: #5cb85c;
 
 body {
   background-image: url('https://images.pexels.com/photos/48603/pexels-photo-48603.jpeg?auto=compress&cs=tinysrgb&h=350');
-  // background-position: center;
-  height: 100%;
-  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .modal-header,
 h4,
 .close {
-  background-color: #5cb85c;
+  background-color: $lightgreen;
   color: $white;
   font-size: 30px;
   text-align: center;
 }
 
 .modal-footer {
-  background-color: #f9f9f9;
+  background-color: $offwhite2;
 }
 
 // Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: $lightblack;
   overflow: hidden;
-}
 
-// Style the links inside the navigation bar */
-.topnav a {
-  color: #f2f2f2;
-  float: left;
-  font-size: 17px;
-  padding: 14px 16px;
-  text-align: center;
-  text-decoration: none;
-}
+  // Style the links inside the navigation bar */
+  a {
+    color: $offwhite;
+    float: left;
+    font-size: 17px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
 
-// Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: $black;
-}
+    // Change the color of links on hover */
+    :hover {
+      background-color: $grey;
+      color: $black;
+    }
 
-// Add a color to the active/current link */
-.topnav a.active {
-  background-color: #4caf50;
-  color: $white;
+    // Add a color to the active/current link */
+    .active {
+      background-color: $green;
+      color: $white;
+    }
+  }
 }
 
 // background-position: center;
@@ -70,26 +74,4 @@ input {
   margin: 8px 0;
   padding: 12px 20px;
   width: 50%;
-}
-
-button {
-  background-color: $green;
-  border: border-box;
-  border-radius: 4px;
-  color: $white;
-  display: inline-block;
-  font-size: 12px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.footer {
-  background-color: $red;
-  bottom: 0;
-  color: $white;
-  left: 0;
-  position: fixed;
-  text-align: center;
-  width: 100%;
 }
