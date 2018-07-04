@@ -1,74 +1,52 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# browser-template
+This is an application for nursing home residents.
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+This application allows residents(users) to select the doctors and aides of their choice based on their specific needs.
 
-## Installation
+https://bentoks2016.github.io/BaretFullStackProject/ is the client end of this application where users can sign up and register
 
-1. [Download](../../archive/master.zip) this template.
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
-    your project.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
+https://github.com/bentoks2016/BaretFullStackProject is the Github
+repo link to this application.
 
-## Structure
+https://github.com/bentoks2016/baret-full-stack-project is the
+Github repo link to this application`s backend API.
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+My planning involed breaking the problem down into very managebale components & working my way to to the major problems.
+It involved critically looking at the overall major objectives and the very minor components parts that make up the objectives.
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`config/environment.js`](config/environment.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+The user stories for this application are as follows:
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+    - [ ] As a user, I want to add a new doctor
+    - [ ] As a user, I want to view a doctor
+    - [ ] As a user, I want to view all doctors
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+    - [ ] As a user, I want to edit a doctor`s details
+    - [ ] As a user, I want to delete a doctor
 
-To deploy a browser-template based SPA, run `grunt deploy`.
 
-## Tasks
+The link to this application`s wireframe is
+https://goo.gl/hS8Zs5
 
-Developers should run these often!
+Technologies used in
+-Javascript
+-HTML
+-CSS
 
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt test`: runs any automated tests, depends on `grunt build`
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
+Unsolved problems which should be fixed in future iterations
+are in the form of development which include the following users
+stories.
 
-## Additional Resources
 
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
+- [ ] As a user, I want to add a new doctor / aide / nurse
+- [ ] As a user, I want to view a doctor / aide / nurse
+- [ ] As a user, I want to view all doctors / aides / nurses
 
-## [License](LICENSE)
+- [ ] As a user, I want to edit all details of doctors / aides / nurses
+- [ ] As a user, I want to delete a resident
+- [ ] As a user, I want to sign-in as a doctor / aide / nurse
 
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+
+- [ ] As a user, I want to make data entry of care provided residents
+- [ ] As a user, I want to make comments on residents condition
+- [ ] As a user, I want to assign doctors & nurses to residents
