@@ -210,11 +210,11 @@ You have successfully changed password.
     <div id="doctorsPage" class="showDocPage hide">
       <div>
       <h2> Doctor`s Registration Form </h2>
-      <form id="doctor_create">
+      <form action="/action_page.php" id="doctor_create">
         <div class="form-group">
-        <input type="text" name="doctor[first_name]" placeholder="FIRST NAME"><br>
-        <input type="text" name="doctor[last_name]" placeholder="LAST NAME"><br>
-        <input type="text" name="doctor[specialization]" placeholder="SPECIALIZATION"><br>
+        <input type="text" required name="doctor[first_name]" placeholder="FIRST NAME"><br>
+        <input type="text" required name="doctor[last_name]" placeholder="LAST NAME"><br>
+        <input type="text" required name="doctor[specialization]" placeholder="SPECIALIZATION"><br>
       </div>
         <button id="doc_create" type="submit" class="btn btn-success">Register</button>
       </form>
@@ -292,19 +292,19 @@ You have successfully changed password.
     <button id="doc_delete" type="submit" class="btn btn-success">Delete</button>
   </form>
 
-  <h2> Show a doctor </h2>
+  <!-- <h2> Show a doctor </h2>
   <form id="doctor_view">
     <div class="form-group">
     <input type="number" name="doctor[id]" placeholder="Enter the Doctor ID"><br>
   </div>
     <button id="doc_view" type="submit" class="btn btn-success">See a Doctor</button>
   </form>
-  <div class="viewDoc"></div>
+  <div class="viewDoc"></div> -->
 
   <h2>Update a doctor`s details</h2>
-  <form id="doctor_update">
+  <form action="/action_page.php" id="doctor_update">
     <div class="form-group">
-    <input type="number" name="doctor[id]" placeholder="Doctor ID"><br>
+    <input type="number" required name="doctor[id]" placeholder="Doctor ID"><br>
     <input type="text" name="doctor[first_name]" placeholder="Doctor`s First Name"><br>
     <input type="text" name="doctor[last_name]" placeholder="Dcotor`s Last Name"><br>
     <input type="text" name="doctor[specialization]" placeholder="specialization"><br>
